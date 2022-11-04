@@ -1,0 +1,33 @@
+
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" defaultHref="/tabs/(planets:planets)">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ planets?.name }}</ion-name>
+    <ion-buttons slot="end">
+      
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content padding="">
+ 
+  <ion-card *ngIf="planets" class="movie-card">
+    <ion-card-header>Residents {{ planets.residents }}: {{ planets.name }}</ion-card-header>
+    <ion-card-content>
+      {{ planets.residents }}
+    </ion-card-content>
+ 
+    <ion-item class="movie-info" lines="none">
+      <ion-icon name="film" slot="start"></ion-icon>
+      Director: {{ film.director }}
+    </ion-item>
+ 
+    <ion-item class="movie-info" lines="none">
+      <ion-icon name="calendar" slot="start"></ion-icon>
+      Release Date: {{ film.release_date | date }}
+    </ion-item>
+  </ion-card>
+ 
+</ion-content>

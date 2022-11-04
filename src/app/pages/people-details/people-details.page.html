@@ -1,0 +1,23 @@
+
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start" defaultHref="/tabs/(people:people)">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-name>{{ people?.name }}</ion-name>
+    <ion-buttons slot="end">
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content padding="">
+ 
+  <ion-card *ngIf="people" class="people-info">
+    <ion-card-header>Name {{ people.name }}: {{ people.skin_color}}</ion-card-header>
+    <ion-card-content>
+      {{ people.films }}
+    </ion-card-content>
+ 
+
+ 
+</ion-content>
